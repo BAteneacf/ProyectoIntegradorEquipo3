@@ -1,0 +1,94 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+.navbar-gris {
+    background-color: #d9d9d9;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+    min-height: 100vh;
+}
+
+.h1 {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.mb-2 {
+    font-family: sans-serif;
+}
+
+.card-body {
+    background-color: #d9d9d9;
+    padding: 10%;
+    border-radius: 20px;
+    border: none;
+}
+
+.card-title {
+    font-family: sans-serif;
+    padding-bottom: 5%;
+}
+
+.btn-aceptar {
+    font-family: sans-serif;
+    background-color:#d9d9d9;
+    padding-right: 10%;
+    padding-left: 10%;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-aceptar:hover {
+    background-color: #ff8fa3;
+}
+
+.card-body2 {
+    background-color: white;
+    padding: 10%;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+/* Agrega estilos personalizados para posicionar el mensaje de éxito */
+#success-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 999;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Estilos para hacer el formulario más ancho */
+#contact-form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+.foot {
+    font-family: sans-serif;
+    background-color: #d9d9d9;
+    padding: 3%;
+}
+
+.foot a, p {
+    color: black;
+    margin: 0;
+}
+
+.foot-text {
+    padding: 3%;
+}
