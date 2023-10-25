@@ -174,8 +174,8 @@ body {
 /*botones para desplazarse. NO MOVER.*/
 .carousel-control-prev, .carousel-control-next {
   background-color: #d9d9d9;
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%); /*este pone los botones al centro*/
