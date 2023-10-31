@@ -5,6 +5,7 @@ const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,10}$/ // 7 a 10 numeros.
+	
 }
 
 const campos = {
@@ -54,22 +55,25 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', (e) => {
-	e.preventDefault();
 
-	const terminos = document.getElementById('terminos');
-	if(campos.nombre && campos.correo && campos.telefono ){
-		formulario.reset();
+const btn = document.getElementById('button');
 
-		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		}, 5000);
+document.getElementById('formulario')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('formulario__grupo-correcto');
-		});
-	} else {
-		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-	}
-});
+   btn.value = 'Enviando...';
+
+   console.log(this);
+   const serviceID = 'service_983v66l';
+   const templateID = 'template_tmy2qf5';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'ENVIAR';
+      alert('Mensaje enviado correctamente');
+    }, (err) => {
+      btn.value = 'ENVIAR';
+      alert(JSON.stringify(err));
+    });
+}); 
