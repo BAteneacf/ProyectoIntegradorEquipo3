@@ -4,7 +4,7 @@ body{ /*Siento que este body no esta haciendo NADA*/
 }
 
 .navbar-gris {
-    background-color: #d9d9d9;
+    background-color: #ffffff;
 }
 
 .container {
@@ -101,61 +101,62 @@ body{ /*Siento que este body no esta haciendo NADA*/
 /* estilos página de Nosotros */
 
 .card {
-   /* border-top-left-radius: 40px;  Borde superior izquierdo redondeado */
-   /* border-bottom-right-radius: 40px;  Borde inferior derecho redondeado */
-    margin-bottom: 3%;
-    background-color: #ffffff;
-    padding: 1%;
-    box-shadow: 2px 6px 8px 0 black; /*Sombrita*/
-}
-
-
-.text-justify {
-    text-align: justify;
-    font-family: sans-serif;
-}
-
-
-.card:hover {
-    background-color:#ff8fe5 ;
-}
-
-
-.card-text {
-    text-align: justify;
-    align-items: center;
-}
-
-.card-body {
-    padding: 5%;
-}
-
-
-.nav-link {
-    font-weight: 600;
-}
-
-
-.column-list {
-    column-count: 2;
-    column-gap: 5px;
-}
-
-
-.column-list li {
-    margin-bottom: 5px 0;
-}
-
-.container {
-    padding-top: 5%;
-}
-
-
-@media(max-width: 576px) { 
-    .card-text {
-        font-size: 0.8rem;
-    }
-}
+	/* border-top-left-radius: 40px;  Borde superior izquierdo redondeado */
+	/* border-bottom-right-radius: 40px;  Borde inferior derecho redondeado */
+	 margin-bottom: 3%;
+	 background-color: #ffffff;
+	 padding: 1%;   
+ }
+ 
+ 
+ .text-justify {
+	 text-align: justify;
+	 font-family: sans-serif;
+ }
+ 
+ 
+ .card:hover {
+	 background-color:#83c02e91 ; 
+	 
+ }
+ 
+ 
+ .card-text {
+	 text-align: justify;
+	 align-items: center;
+ }
+ 
+ .card-body-us {
+	 padding: 5%;
+	 box-shadow: 10px 10px 0px 0px #000000; /*Sombrita*/
+	 z-index: 1;
+ }
+ 
+ .nav-link {
+	 font-weight: 600;
+ }
+ 
+ 
+ .column-list {
+	 column-count: 2;
+	 column-gap: 5px;
+ }
+ 
+ 
+ .column-list li {
+	 margin-bottom: 5px 0;
+ }
+ 
+ .container {
+	 padding-top: 5%;
+ }
+ 
+ 
+ @media(max-width: 576px) { 
+	 .card-text {
+		 font-size: 0.8rem;
+	 }
+ }
 
 /*Footer, logo y redes*/
 .logo {
@@ -372,3 +373,51 @@ main {
 		width: 100%;
 	}
 }
+
+
+
+
+/*Carrusel*/ 
+.carousel { 
+    width: 90%; 
+    margin: auto;
+  
+  }
+  
+  .slick-slide { /* Este le da espacio entre cada "contenedor" de img.*/
+    padding: 50px;
+  }
+  .slick-slide img {
+  display: block;
+  margin:auto;
+  max-width: 100%;
+  height: 80%;
+  border-radius: 10%;
+  border-style:outset;
+  }
+  
+  .description {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .slick-prev, .slick-next {
+  background-color: #68bccb7a;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%; /* Manda los botones al centro del carrusel. */
+  }
+  
+  .slick-prev {
+  left: 0; /* Coloca el botón < a la izquierda */
+  z-index: 1; /* El méndigo botón se me ponía atrás de la imagen así que tuve que ponerle este para que lo mandara al frente jajaja*/
+  }
+  
+  .slick-next {
+  right: 0; /* Coloca el botón > a la derecha */
+  }
