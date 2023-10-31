@@ -1,5 +1,5 @@
-body {
-    background-color: white;
+body{ /*Siento que este body no esta haciendo NADA*/
+    background-color: rgb(9, 216, 16);
     margin: 0;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .card-body {
-    background-color: #d9d9d9;
+    background-color: #ffffff;
     padding: 10%;
     border-radius: 20px;
     border: none;
@@ -58,6 +58,8 @@ body {
     border-radius: 20px;
     border: 2px solid black;
 }
+
+
 
 /* Agrega estilos personalizados para posicionar el mensaje de éxito */
 #success-card {
@@ -94,14 +96,21 @@ body {
 }
 
 
+
+
 /* estilos página de Nosotros */
 
 .card {
-    border-top-left-radius: 40px; /* Borde superior izquierdo redondeado */
-    border-bottom-right-radius: 40px; /* Borde inferior derecho redondeado */
+   /* border-top-left-radius: 40px;  Borde superior izquierdo redondeado */
+   /* border-bottom-right-radius: 40px;  Borde inferior derecho redondeado */
     margin-bottom: 3%;
     background-color: #ffffff;
+<<<<<<< HEAD
     padding: 5%;
+=======
+    padding: 1%;
+    box-shadow: 2px 6px 8px 0 black; /*Sombrita*/
+>>>>>>> 8988606950de84b9e77304fda4528315054bde3e
 }
 
 
@@ -112,7 +121,11 @@ body {
 
 
 .card:hover {
+<<<<<<< HEAD
     background-color:#82C02D ;
+=======
+    background-color:#ff8fe5 ;
+>>>>>>> 8988606950de84b9e77304fda4528315054bde3e
 }
 
 
@@ -333,7 +346,7 @@ main {
 
 /*CARRUSEL*/ 
 .carousel { 
-  width: 65%; 
+  width: 90%; 
   margin: auto;
 
 }
