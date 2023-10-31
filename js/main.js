@@ -62,6 +62,7 @@ document.getElementById('formulario')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
+<<<<<<< HEAD
    btn.value = 'Enviando...';
 
    console.log(this);
@@ -77,3 +78,17 @@ document.getElementById('formulario')
       alert(JSON.stringify(err));
     });
 }); 
+=======
+		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+			icono.classList.remove('formulario__grupo-correcto');
+		});
+	} else {
+		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+	}
+});
+
+
+
+
+
+>>>>>>> c5ff6a6fb1ec7236655e660a24c1f3f3f90f2fc1
