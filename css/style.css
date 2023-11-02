@@ -1,3 +1,105 @@
+/*/grid*/
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	min-height: 100%;
+}
+
+html{
+	height: 100%;
+}
+
+.grid-container > *{
+   text-align: center;
+}
+
+.header{
+	grid-area: header;
+}
+
+.navbar{
+	grid-area: navbar;
+	background-color: darkorange;
+}
+
+.sidebar{
+	grid-area: sidebar ;
+	background-color: blueviolet;
+}
+
+.main{
+	grid-area: main;
+	background-color: aquamarine;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: rgb(0, 0, 0);
+}
+
+/*Teléfono*/
+.grid-container{
+	display: grid;
+	gap: 10px;
+	grid-template-areas:
+	"header"
+	"navbar"
+	"main"
+	"sidebar"
+	"footer"
+	;
+}
+
+/*Para tablet*/
+@media(min-width:768px){
+	.grid-container{
+		grid-template-columns: 200px auto ;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"header header"
+		"navbar navbar"
+		"sidebar main"
+		"footer footer";
+	}
+}
+
+/*Para escritorio*/
+@media(min-width:900px){
+	.grid-container{
+		grid-template-columns: 200px auto ;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"header header header"
+		"navbar navbar navbar"
+		"sidebar sidebar main"
+		"footer footer footer";
+	}
+}
+
+/*Animaciones*/
+@keyframes ajo{
+	from{
+		  opacity: 1;
+	}
+	to{
+		opacity: 0;
+	}
+}
+.ajo{
+	animation-name: ajo;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+
+}
+
+/*grid*/
+
+
 body{ /*Siento que este body no esta haciendo NADA*/
     background-color: rgb(9, 216, 16);
     margin: 0;
@@ -8,10 +110,7 @@ body{ /*Siento que este body no esta haciendo NADA*/
 	border-radius: 0 0 40px 40px;
 	box-shadow: 15px 15px 0px -1px #000000;
 }
-/*elementos del nav bar*/
 
-.nav-item {
-}
 /*indicador de página*/
 
 .nav-item:hover{;
@@ -19,11 +118,37 @@ body{ /*Siento que este body no esta haciendo NADA*/
 }
 
 /*Cierra estilo del navbar*/
-.navbar-gris {
-    background-color: #d9d9d9;
+
+/*footer*/
+.footer a{
+	color: white;
+	text-decoration: none;
+}
+.footer p{
+	color: white;
 }
 
-
+.container.text-center {
+	padding: px;
+  }
+  
+  .row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+  }
+  
+  .col {
+	flex: 0 0 calc(33.333% - 10px);
+	margin: 5px;
+  }
+  
+  
+  .col img {
+	max-width: 100%;
+	height: auto;
+  }
+/*fin del footer*/
 .container {
     display: flex;
     flex-direction: row;
@@ -149,9 +274,7 @@ body{ /*Siento que este body no esta haciendo NADA*/
 	 z-index: 1;
  }
  
- .nav-link {
-	 font-weight: 600;
- }
+ 
  
  
  .column-list {

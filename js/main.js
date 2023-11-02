@@ -49,6 +49,39 @@ ul1.insertAdjacentHTML("beforeend", `<li class="nav-item">
 //fin del navbar
 
 
+//footer
+let foot = document.getElementsByClassName("container text-center").item(0);
+foot.className = "container text-center";
+
+let footer_div = document.createElement("div");
+footer_div.className = "row";
+foot.append(footer_div);
+
+footer_div.insertAdjacentHTML("beforeend",`
+<div class="col">
+<a href="#">Derechos de Autor</a>
+<a href="#">Aviso de Privacidad</a>
+<p>Derechos reservados BaByDevs</p>
+</div>
+`);
+
+footer_div.insertAdjacentHTML("beforeend",`
+<div class="col">
+<img src="./src/logo_vector_500x150.svg">
+</div>
+`);
+
+footer_div.insertAdjacentHTML("beforeend",`
+<div class="col">
+<a href="#"><img src="./src/facebook.png" alt="logo facebook"></a>
+<a href="#"><img src="./src/instagram.png" alt="logo instagram"></a>
+<a href="#"><img src="./src/linkedin.png" alt="logo linkedin"></a>
+<a href="#"><img src="./src/tik-tok.png" alt="logo tiktok"></a>
+</div>
+`);
+
+//footer
+
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
