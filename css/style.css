@@ -113,7 +113,7 @@ body{ /*Siento que este body no esta haciendo NADA*/
 
 /*indicador de página*/
 
-.nav-item:hover{;
+.nav-item:hover{
 	border-bottom: 4px solid #f13e8f;
 }
 
