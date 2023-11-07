@@ -25,11 +25,11 @@
   <nav class="navbar navbar-expand-lg navbar-gris">
        
   </nav>
- 
-<body>
+
+ <!--Formulario-->
 	<main>
     <div class="title" id="CONTACTAR">
-      <label class="title"> ¿NECESITAS CONTACTAR CON NOSOTROS? </label> 
+      <h2 class="title"> ¿NECESITAS CONTACTAR CON NOSOTROS? </h2> 
      </div>
      <br>
      <br>
@@ -42,18 +42,18 @@
       <div class="formulario__grupo" id="grupo__nombre">
 				<label for="nombre" class="formulario__label">Nombre</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe" required>
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					
 				</div>
 				<p class="formulario__input-error">El nombre solo puede contener letras.</p>
 			</div>
-
 
 			<!-- Grupo: Correo Electronico -->
 			<div class="formulario__grupo" id="grupo__correo">
 				<label for="correo" class="formulario__label">Correo Electrónico</label>
 				<div class="formulario__grupo-input">
-					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com" required>
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
@@ -63,7 +63,7 @@
 			<div class="formulario__grupo" id="grupo__telefono">
 				<label for="telefono" class="formulario__label">Teléfono</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567" required>
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 10 dígitos.</p>
@@ -73,17 +73,19 @@
       <div class="formulario__grupo" id="grupo__mensaje">
 				<label for="mensaje" class="formulario__label">Mensaje</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje">
+					<input type="text" class="formulario__input" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" required>
+					
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El mensaje solo puede contener letras.</p>
 			</div>
+			<br>
       
       <!-- Botton-->
 			
-			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<input type="submit" class="btn btn-success"  id="button" value="ENVIAR" >
-        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			<div class="formulario__grupo-btn-enviar">
+			 <input type="submit" class="btn-success"  id="button" value="Enviar" > 
+			  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
 
 		</form>

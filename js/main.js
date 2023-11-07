@@ -82,8 +82,10 @@ footer_div.insertAdjacentHTML("beforeend",`
 
 //footer
 
-const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll('#formulario input');
+//Formulario "Contactanos"
+const formulario = document.getElementById("formulario");
+const inputs = document.querySelectorAll("#formulario input");
+
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -161,3 +163,4 @@ document.getElementById('formulario')
       alert(JSON.stringify(err));
     });
 }); 
+// Fin del formulario "Contactanos"

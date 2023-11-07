@@ -333,6 +333,18 @@ main {
 	gap: 20px;
 }
 
+.btn-success { 
+	background-color: white;
+	border-radius: 1rem;
+	font-size: medium;
+	font-weight: bold;
+	width: 6rem;
+	height: 2rem;
+	size: 32px;
+
+}
+
+
 .formulario__label {
 	display: block;
 	font-weight: 700;
@@ -347,8 +359,8 @@ main {
 .formulario__input {
 	width: 100%;
 	background: #fff;
-	border: 3px solid transparent;
-	border-radius: 3px;
+	border: 1px solid black;
+	border-radius: 2rem;
 	height: 45px;
 	line-height: 45px;
 	padding: 0 40px 0 10px;
@@ -472,8 +484,9 @@ main {
 		grid-column: 1;
 	}
 
-	.formulario__btn {
+	.formulario__grupo-btn-enviar {
 		width: 100%;
+	
 	}
 }
 
@@ -513,7 +526,7 @@ main {
 		width: 100%;
 	}
 }
-
+/*Fin del formulario Contactanos*/
 
 /*Carrusel*/ 
 .carousel { 
