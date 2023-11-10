@@ -315,7 +315,7 @@ body{ /*Siento que este body no esta haciendo NADA*/
 	box-sizing: border-box;
 }
 
-body {
+#body-degradado {
 	font-family: 'Roboto', sans-serif;
 	background: linear-gradient(#f13e8f, #f5790c,#ffc603);
 }
@@ -573,3 +573,85 @@ main {
   right: 0; /* Coloca el botón > a la derecha */
   }
 
+/* PÁGINA AGREGAR ASESORES */
+#main-asesores {
+    max-width: 100%;
+    width: 100%;
+    padding: 5%;
+}
+
+#container-nom {
+    display: flex;
+    background-color: #f13e8f;
+    border: 2px solid black;
+    gap: 5%;
+    align-items: center;
+}
+
+#container-hab {
+    display: flex;
+    background-color: #16d6fa;
+    border: 2px solid black;
+    align-items: center;
+}
+
+#container-hor {
+    display: flex;
+    background-color: #a06dff;
+    border: 2px solid black;
+}
+
+#container-botones {
+    padding: 0;
+}
+
+#Name {
+    margin-top: 7px;
+}
+
+#Email {
+    margin-top: 7px;
+}
+
+#flexCheckIndeterminate {
+    background-color: black;
+}
+
+#flexRadioDefault {
+    background-color: black;
+}
+
+#flexCheckChecked {
+    background-color: black;
+}
+
+#btnAgregar-form {
+    background-color: #f5790c;
+    border: 2px solid black;
+    color: black;
+    align-items: center;
+}
+
+#btnClear-form {
+    background-color: #82c02e;
+    border: 2px solid black;
+    color: black;
+    align-items: center;
+}
+
+#boton-img {
+    padding-bottom: 3%;
+    align-items: center;
+}
+
+#botones-al {
+    padding-top: 5%;
+    align-items: center;
+}
+
+#upload_widget {
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    align-items: center;
+}

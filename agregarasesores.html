@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Agregar asesores</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="./css/FormAsesores.css">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.2/examples/checkout/form-validation.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- ¿botones? -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-sm bg-body-tertiary"></nav>
+    </header>
+
+    <main>
+    <h2 style="text-align: center;"><b>Agregar asesores</b></h2>
+    <div class="container" id="main-asesores">
+        <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+            <p id="alertValidacionesTexto"></p>
+        </div>
+
+        <div class="row justify-content-center align-items-center">
+            <!-- <div class="col-sm-12 col-md-12"> -->
+                <!-- <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+                    <p id="alertValidacionesTexto"></p>
+                </div> -->
+
+                <form class="needs-validation" novalidate id="formulario">
+                    <div class="row">
+
+                        <!-- CONTENEDOR 1: Datos Personales -->
+                        <div class=" p-3 rounded mb-4" id="container-nom">
+                            <!-- NOMBRE -->
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <label for="Name" class="form-name"><b>Nombre completo</b></label>
+                                <input type="text" class="form-control" name="Name" id="Name"
+                                    placeholder="Nombre completo" value="" autocomplete="on">
+                            </div>
+
+                            <!-- EMAIL -->
+                            <div class="mb-3">
+                                <label for="Email" class="form-email"><b>Correo electrónico</b></label>
+                                <input type="email" class="form-control" name="Email" id="Email"
+                                    placeholder="Correo electrónico" value="" autocomplete="on">
+                            </div>
+                        </div>
+
+                        <!-- CONTENEDOR 2: Habilidades -->
+                        <div class="p-3 rounded mb-4" id="container-hab">
+                            <!--HABILIDAD PRINCIPAL  -->
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <div class="form-check" id="form-hab">
+                                    <p for="description"><b>Habilidad principal</b></p>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault">
+                                        <label class="form-check-label" for="flexRadioDefault1">HTML5</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault">
+                                        <label class="form-check-label" for="flexRadioDefault2">CSS3</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault">
+                                        <label class="form-check-label" for="flexRadioDefault1">Bootstrap</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault">
+                                        <label class="form-check-label" for="flexRadioDefault2">JavaScript</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault">
+                                        <label class="form-check-label" for="flexRadioDefault1">Java</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault">
+                                        <label class="form-check-label" for="flexRadioDefault2">Metodología
+                                            SCRUM</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault">
+                                        <label class="form-check-label" for="flexRadioDefault1">Trello</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault">
+                                        <label class="form-check-label" for="flexRadioDefault2">Figma</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HABILIDADES ADICIONALES -->
+                            <div class="col-sm-6 col-md-6 mb-3">
+                                <div class="form-check" id="form-hab-ad">
+                                    <p for="description"><b>Habilidades adicionales</b></p>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked1">HTML5</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked2">CSS3</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked3">Bootstrap</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked4">JavaScript</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked5">Java</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked6">Metodología
+                                            SCRUM</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked7">Trello</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked8">Figma</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CONTENEDOR 3: Horarios y Precio -->
+                        <div class="p-3 rounded mb-4" id="container-hor">
+                            <!-- HORARIO -->
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <div class="form-check" id="horario">
+                                    <p for="Precio"><b>Horarios de asesorías</b></p>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">08:00-09:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">09:00-10:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">10:00-11:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">11:00-12:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">12:00-13:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">15:00-16:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">16:00-17:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">17:00-18:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">18:00-19:00</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">19:00-20:00</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PRECIO -->
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <div class="form-check" id="precio">
+                                    <p for="Precio"><b>Precio de asesoría</b></p>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckIndeterminate">
+                                        <label class="form-check-label" for="flexCheckIndeterminate">$150</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                    <!-- BOTONES -->
+                    <div id="container-botones">
+                    <div class="col-md-12 order-md-1 mx-auto text-md-start" id="boton-img">
+                    <button id="upload_widget" class="btn btn-primary btn-lg btn-block">Añadir imagen</button>
+                    </div>
+                    <div class="col-md-12 order-md-1 mx-auto text-md-end" id="botones-al">
+                        <button id="btnClear-form" class="btn btn-primary btn-lg btn-block" type="button">Limpiar</button>
+                        <button id="btnAgregar-form" class="btn btn-primary btn-lg btn-block" type="button">Agregar</button>
+                    </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+            </form>
+        </div>
+    </div>
+    </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center"></div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/agregarasesores.js"></script>
+
+    <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <script src="https://getbootstrap.com/docs/5.2/examples/checkout/form-validation.js"></script>
+
+    <!-- ¿validacion? -->
+    <script src="https://getbootstrap.com/docs/5.2/examples/checkout/form-validation.js"></script>
+
+    <!-- script imágenes -->
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>  
+
+    <script type="text/javascript">  
+    var myWidget = cloudinary.createUploadWidget({
+      cloudName: 'my_cloud_name', 
+      uploadPreset: 'my_preset'}, (error, result) => { 
+        if (!error && result && result.event === "success") { 
+          console.log('Done! Here is the image info: ', result.info); 
+        }
+      }
+    )
+    
+    document.getElementById("upload_widget").addEventListener("click", function(){
+        myWidget.open();
+      }, false);
+    </script>
+
+</body>
+
+</html>
