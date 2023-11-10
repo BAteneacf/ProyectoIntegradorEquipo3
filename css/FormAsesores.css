@@ -5,7 +5,7 @@
     padding: 5%;
 }
 
-#container-nom {
+#nom {
     display: flex;
     background-color: #f13e8f;
     border: 2px solid black;
@@ -13,14 +13,14 @@
     align-items: center;
 }
 
-#container-hab {
+#hab {
     display: flex;
     background-color: #16d6fa;
     border: 2px solid black;
     align-items: center;
 }
 
-#container-hor {
+#hor {
     display: flex;
     background-color: #a06dff;
     border: 2px solid black;
