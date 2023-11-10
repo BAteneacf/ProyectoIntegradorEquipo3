@@ -315,7 +315,7 @@ body{ /*Siento que este body no esta haciendo NADA*/
 	box-sizing: border-box;
 }
 
-body {
+#body-degradado {
 	font-family: 'Roboto', sans-serif;
 	background: linear-gradient(#f13e8f, #f5790c,#ffc603);
 }
@@ -572,4 +572,3 @@ main {
   .slick-next {
   right: 0; /* Coloca el botón > a la derecha */
   }
-
