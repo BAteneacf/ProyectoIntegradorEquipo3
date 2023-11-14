@@ -67,7 +67,7 @@ footer_div.insertAdjacentHTML("beforeend",`
 
 footer_div.insertAdjacentHTML("beforeend",`
 <div class="col">
-<img src="./src/logo_vector_500x150.svg">
+<img src="./src/logo_vector_blanco_500x150.svg">
 </div>
 `);
 
