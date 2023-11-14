@@ -76,4 +76,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Cloudinary - imágenes
+    var myWidget = cloudinary.createUploadWidget({
+    cloudName: 'dfzy1rq7e',
+    uploadPreset: 'uw_test'
+    }, (error, result) => {
+    if (!error && result && result.event === "success") {
+        console.log('Done! Here is the image info: ', result.info);
+    }
+    }
+    )
 
+    document.getElementById("upload_widget").addEventListener("click", function () {
+    myWidget.open();
+    }, false);
