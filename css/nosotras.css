@@ -1,0 +1,204 @@
+/*/grid*/
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	min-height: 100%;
+	background: linear-gradient(0deg, rgba(241,62,143,0.9322916666666666) 1%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(22,214,250,1) 96%);
+	background-repeat: no-repeat;
+	margin: 0;
+	background-attachment: fixed;
+}
+
+html{
+	height: 100%;
+}
+
+.grid-container > *{
+   text-align: center;
+}
+
+.header{
+	grid-area: header;
+}
+
+.navbar{
+	grid-area: navbar;
+	background-color: darkorange;
+}
+
+.sidebar{
+	grid-area: sidebar ;
+	background-color: blueviolet;
+}
+
+.main{
+	grid-area: main;
+	background-color: aquamarine;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: rgb(0, 0, 0);
+}
+
+/*Teléfono*/
+.grid-container{
+	display: grid;
+	gap: 10px;
+	grid-template-areas:
+	"header"
+	"navbar"
+	"main"
+	"sidebar"
+	"footer"
+	;
+}
+
+/*Para tablet*/
+@media(min-width:768px){
+	.grid-container{
+		grid-template-columns: 200px auto ;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"header header"
+		"navbar navbar"
+		"sidebar main"
+		"footer footer";
+	}
+}
+
+/*Para escritorio*/
+@media(min-width:900px){
+	.grid-container{
+		grid-template-columns: 200px auto ;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"header header header"
+		"navbar navbar navbar"
+		"sidebar sidebar main"
+		"footer footer footer";
+	}
+}
+
+
+/*grid*/
+
+/*navbar*/
+.navbar {
+	background-color: white;
+	border-radius: 0 0 40px 40px;
+	box-shadow: 15px 15px 0px -1px #000000;
+}
+
+/*indicador de página*/
+
+.nav-item:hover{
+	border-bottom: 4px solid #f13e8f;
+}
+
+/*Cierra estilo del navbar*/
+
+/* estilos página de Nosotros */
+
+.card {
+	/* border-top-left-radius: 40px;  Borde superior izquierdo redondeado */
+	/* border-bottom-right-radius: 40px;  Borde inferior derecho redondeado */
+	 margin-bottom: 3%;
+	 background-color: #ffffff;
+	 padding: 1%;   
+ }
+ 
+ 
+ .text-justify {
+	 text-align: justify;
+	 font-family: sans-serif;
+ }
+ 
+ 
+ .card:hover {
+	 background-color:#83c02e91 ; 
+	 
+ }
+ 
+ 
+ .card-text {
+	 text-align: justify;
+	 align-items: center;
+ }
+ 
+ .card-body-us {
+	 padding: 5%;
+	 box-shadow: 15px 15px 0px -1px #000000; /*Sombrita*/
+	 z-index: 1;
+ }
+ 
+ 
+ .column-list {
+	 column-count: 2;
+	 column-gap: 5px;
+ }
+ 
+ 
+ .column-list li {
+	 margin-bottom: 5px 0;
+ }
+ 
+ .container {
+	 padding-top: 5%;
+ }
+ 
+ 
+ @media(max-width: 576px) { 
+	 .card-text {
+		 font-size: 0.8rem;
+	 }
+ }
+
+/*---------------Carrusel---------------*/ 
+.carousel { 
+    width: 90%; 
+    margin: auto;
+  
+  }
+  
+  .slick-slide { /* Este le da espacio entre cada "contenedor" de img.*/
+    padding: 50px;
+  }
+  .slick-slide img {
+  display: block;
+  margin:auto;
+  max-width: 100%;
+  height: 80%;
+  border-radius: 10%;
+  border-style:outset;
+  }
+  
+  .description {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .slick-prev, .slick-next {
+  background-color: #68bccb7a;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%; /* Manda los botones al centro del carrusel. */
+  }
+  
+  .slick-prev {
+  left: 0; /* Coloca el botón < a la izquierda */
+  z-index: 1; /* El méndigo botón se me ponía atrás de la imagen así que tuve que ponerle este para que lo mandara al frente jajaja*/
+  }
+  
+  .slick-next {
+  right: 0; /* Coloca el botón > a la derecha */
+  }
