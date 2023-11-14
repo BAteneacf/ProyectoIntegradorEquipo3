@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/Contacto.css"
 <!--envio de formulario-->
   <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -21,15 +21,29 @@
 </script>
 </head>
 
-<body id="body-degradado">
-	<header class="header">
-		<nav class="navbar navbar-expand-sm bg-body-tertiary"></nav>
-	</header>
-
- <!--Formulario-->
+<body>
+  <nav class="navbar navbar-expand-lg navbar-gris">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="#">INICIO</a>
+          <a class="nav-link" href="#">ASESORES</a>
+          <a class="nav-link" href="#">NOSOTROS</a>
+          <a class="nav-link" href="#">CONTÁCTANOS</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+ 
+<body>
 	<main>
     <div class="title" id="CONTACTAR">
-      <h2 class="title"> ¿NECESITAS CONTACTAR CON NOSOTROS? </h2> 
+      <label class="title"> ¿NECESITAS CONTACTAR CON NOSOTROS? </label> 
      </div>
      <br>
      <br>
@@ -42,31 +56,31 @@
       <div class="formulario__grupo" id="grupo__nombre">
 				<label for="nombre" class="formulario__label">Nombre</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe" required>
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
-					
 				</div>
-				<p class="formulario__input-error">El nombre sólo puede contener letras.</p>
+				<p class="formulario__input-error">El nombre solo puede contener letras.</p>
 			</div>
+
 
 			<!-- Grupo: Correo Electronico -->
 			<div class="formulario__grupo" id="grupo__correo">
 				<label for="correo" class="formulario__label">Correo Electrónico</label>
 				<div class="formulario__grupo-input">
-					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com" required>
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El correo sólo puede contener letras, números, puntos, guiones.</p>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
 			</div>
 
 			<!-- Grupo: Teléfono -->
 			<div class="formulario__grupo" id="grupo__telefono">
 				<label for="telefono" class="formulario__label">Teléfono</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567" required>
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El teléfono sólo puede contener 10 dígitos numéricos.</p>
+				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 10 dígitos.</p>
 			</div>
 
 			<!--Grupo: Mensaje-->
@@ -74,18 +88,16 @@
 				<label for="mensaje" class="formulario__label">Mensaje</label>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" required>
-					
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El mensaje sólo puede contener letras.</p>
+				<p class="formulario__input-error">El mensaje solo puede contener letras.</p>
 			</div>
-			<br>
       
       <!-- Botton-->
 			
-			<div class="formulario__grupo-btn-enviar">
-			 <input type="submit" class="btn-success"  id="button" value="Enviar" > 
-			  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<input type="submit" class="btn btn-success"  id="button" value="ENVIAR" >
+        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
 
 		</form>
@@ -96,17 +108,23 @@
   <br/>
   <br/>
 
-  <footer class="footer">
-    <div class="container text-center">
-      
-  </footer>
+  <div class="foot">
+    <footer>
+      <div class="foot-text">
+        <a class="nav-link" href="#">Derechos de autoras</a>
+        <a class="nav-link" href="#">Aviso de privacidad</a>
+        <a class="nav-link" href="#">Derechos reservados</a>
+      </div>
+      <p class="text-center">© 2023 Baby Devs</p>
+    </footer>
+  </div>
+  </div>
 
   
   <!-- Bootstrap -->
 
     <script src="./js/contacto.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 </html>
