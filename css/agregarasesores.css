@@ -5,6 +5,10 @@
     padding: 5%;
 }
 
+#agregar-as {
+    padding-top: 5%;
+}
+
 #nom {
     display: flex;
     background-color: #f13e8f;
