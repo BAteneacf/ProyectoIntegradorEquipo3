@@ -31,7 +31,7 @@ ul1.insertAdjacentHTML("beforeend", `<li class="nav-item">
 </li>`);
 
 ul1.insertAdjacentHTML("beforeend", `<li class="nav-item">
-<a class="nav-link active" aria-current="page" href="./nosotros.html">NOSOTROS</a>
+<a class="nav-link active" aria-current="page" href="./nosotras.html">NOSOTROS</a>
 </li>`);
 ul1.insertAdjacentHTML("beforeend", `<li class="nav-item">
 <a class="nav-link active" aria-current="page" href="./contacto.html">CONTÁCTANOS</a>
