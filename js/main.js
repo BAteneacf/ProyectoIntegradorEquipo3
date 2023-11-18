@@ -37,7 +37,7 @@ ul1.insertAdjacentHTML("beforeend", `<li class="nav-item">
 <a class="nav-link active" aria-current="page" href="./contacto.html">CONTÁCTANOS</a>
 </li>`);
 ul1.insertAdjacentHTML("beforeend", `<li class="nav-item">
-<a class="nav-link active" aria-current="page" href="./perfilusuario.html">
+<a class="nav-link active" aria-current="page" href="./registro.html">
     <img src="./src/usuario.svg" alt="perfil icono" height="20px">
 </a>
 </li>`);

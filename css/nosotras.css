@@ -1,4 +1,4 @@
-/* estilos página de Nosotros */
+/* estilos página de Nosotras */
 
 .card {
 	/* border-top-left-radius: 40px;  Borde superior izquierdo redondeado */
@@ -6,6 +6,7 @@
 	 margin-bottom: 3%;
 	 background-color: #ffffff;
 	 padding: 1%;   
+   min-height: 220px;
  }
  
  

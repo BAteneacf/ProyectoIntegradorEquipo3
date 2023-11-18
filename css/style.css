@@ -14,18 +14,19 @@
 /*Cierra estilo del navbar*/
 
 /*footer*/
+.footer{
+	background-color: #000000;
+}
+
 .footer a{
 	color: white;
 	text-decoration: none;
+	margin-left: 3%;
 }
 .footer p{
 	color: white;
 }
-
-.container.text-center {
-	padding: px;
-  }
-  
+ 
   .row {
 	display: flex;
 	justify-content: space-between;

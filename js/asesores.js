@@ -1,7 +1,7 @@
 ///MAIN ASESORES--- NO MOVER POR FAVOR
 document.addEventListener("DOMContentLoaded", function () {
     function addItem(item) {
-      const itemHTML = `<div class="card" style="width: 18rem; padding: 10px style= "object-fit:contain; padding:5px">
+      const itemHTML = `<div class="card" style="width: 18rem; padding: 10px; margin-bottom: 30px; margin-right: 20px; style= "object-fit:contain; padding:5px">
           <img src="${item.img}" class="card-img-top" alt="image">
           <div class="card-body">
               <h5 class="card-title" style="text-align: center">${item.name}</h5>
