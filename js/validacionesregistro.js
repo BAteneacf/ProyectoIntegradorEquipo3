@@ -5,7 +5,7 @@ const formulario__login = document.getElementById("formulario__login");
 
 
 const expresiones = {
-    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guiones
+    usuario:/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, // Correo, números, letras, arroba, guión bajo
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     password: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guiones.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -91,47 +91,84 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(campos);
 
+    // Obtener los datos actuales del localStorage
+    let usuariosGuardados = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Verificar si los campos son válidos antes de continuar
     if (campos.nombre && campos.password && campos.correo && campos.telefono) {
+        // Obtener los valores del formulario
         let nombre = document.getElementById("nombre").value;
         let password = document.getElementById("password").value;
         let correo = document.getElementById("correo").value;
         let telefono = document.getElementById("telefono").value;
-        let usuario = {
+
+        // Crear un nuevo usuario
+        let nuevoUsuario = {
             nombre,
             password,
             correo,
             telefono
         };
-        console.log(usuario);
-        formulario.reset();
-        localStorage.setItem("usuario", JSON.stringify(usuario));
-        alert("Registrado correctamente")
 
+        // Agregar el nuevo usuario a la lista
+        usuariosGuardados.push(nuevoUsuario);
+
+        // Guardar la lista actualizada en el localStorage
+        localStorage.setItem("usuarios", JSON.stringify(usuariosGuardados));
+
+        // Restablecer el formulario
+        formulario.reset();
+
+        // Mostrar un mensaje de registro exitoso
+        alert("Registrado correctamente");
+
+        // Limpiar las clases de validación en los grupos correctos
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto');
         });
     } else {
+        // Si los campos no son válidos, mostrar un mensaje de error
         formulario.classList.add('formulario__mensaje-activo');
     }
 });
 
-
+//Inicio de Sesión
 
 formulario_login.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(campos);
 
-    if (campos.usuario && campos.password) {
+    // Obtener los datos actuales del localStorage
+    let usuariosGuardados = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Obtener los valores del formulario
+    let correo = document.getElementById("usuario").value;
+    let password = document.getElementById("password_login").value;
+
+    // Verificar si el usuario y la contraseña coinciden con los datos almacenados
+    let usuarioEncontrado = usuariosGuardados.find(usuario => usuario.correo === correo && usuario.password === password);
+
+    if (usuarioEncontrado) {
+        // Si las credenciales son correctas
         formulario_login.reset();
-
-        alert("Login exitoso")
-
+        alert("Login exitoso");//TODO: cambiar alert por algo más
+        // Redirigir o realizar otras acciones necesarias para un inicio de sesión exitoso
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto');
         });
+        //TODO: Agregar interacción o interfaz de perfil y cierre de sesión
+        //TODO: Agregar botón de cierre de sesión
+        window.location = 'index.html';
+        // Agregar botón de cerrar sesión si es necesario
+    } else if (usuariosGuardados.some(usuario => usuario.correo === correo)) {
+        // Si el correo es correcto pero la contraseña es incorrecta
+        alert("Contraseña incorrecta. Por favor, vuelva a intentar.");
     } else {
-        document.getElementById('formulario__login').classList.add('formulario__mensaje-activo');
+        // Si el usuario no está registrado
+        alert("Usuario no encontrado. Por favor, regístrese.");
+        // Redirigir o realizar otras acciones necesarias para el caso de un usuario no registrado
     }
 });
+
+//TODO: Agregar botón de cierre de sesión: Resetear todo 
+//TODO: Construir interfaz de perfil de usuario tras log in (Figma: Perfil logeado)

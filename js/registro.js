@@ -29,7 +29,7 @@ function anchoPage(){
 
 anchoPage();
 
-
+//animaciones login y registro
     function iniciarSesion(){
         if (window.innerWidth > 850){
             formulario_login.style.display = "block";
