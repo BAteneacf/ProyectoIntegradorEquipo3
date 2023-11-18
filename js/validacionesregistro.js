@@ -43,7 +43,7 @@ const validarFormulario = (e) => {
             break;
     }
 }
-
+//TODO: Agregar validación para aceptar en contraseña al menos 4 dígitos y menos de 12
 const validarCampo = (expresion, input, campo) => {
     if (expresion.test(input.value)) {
         document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
@@ -110,7 +110,7 @@ formulario.addEventListener('submit', (e) => {
             correo,
             telefono
         };
-
+        //Done: agregar validación sobre correos repetidos
         // Agregar el nuevo usuario a la lista
         usuariosGuardados.push(nuevoUsuario);
 
@@ -135,6 +135,19 @@ formulario.addEventListener('submit', (e) => {
 
 //Inicio de Sesión
 
+//Verificar sí ya se encuentra la sesión iniciada
+document.addEventListener("DOMContentLoaded", () => {
+    const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
+    //Mostrar el perfil
+    if(usuarioActual){
+        document.getElementById("login_Registro").style.display = "none";
+        document.getElementById("perfil_cierreSesion").style.display = "flex";
+
+        document.getElementById("nombreDeUsuario").innerText = usuarioActual.nombre;
+        document.getElementById("perfil_correo").innerText = usuarioActual.correo;
+        document.getElementById("perfil_password").innerText = usuarioActual.password;
+    }
+})
 formulario_login.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -152,13 +165,23 @@ formulario_login.addEventListener('submit', (e) => {
         // Si las credenciales son correctas
         formulario_login.reset();
         alert("Login exitoso");//TODO: cambiar alert por algo más
-        // Redirigir o realizar otras acciones necesarias para un inicio de sesión exitoso
-        document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-            icono.classList.remove('formulario__grupo-correcto');
-        });
-        //TODO: Agregar interacción o interfaz de perfil y cierre de sesión
-        //TODO: Agregar botón de cierre de sesión
-        window.location = 'index.html';
+        //Buscar en el objeto el nombre, el correo y el password y actualizar el DOM
+        document.getElementById("nombreDeUsuario").innerText = usuarioEncontrado.nombre;
+        document.getElementById("perfil_correo").innerText = usuarioEncontrado.correo;
+        document.getElementById("perfil_password").innerText = usuarioEncontrado.password;
+
+        //Almacenar los adtos de inicio de sesión en el localStorage
+        localStorage.setItem("usuarioActual", JSON.stringify(usuarioEncontrado));
+
+        //Done: Agregar interacción o interfaz de perfil y cierre de sesión
+
+        //Ocultar display login y registro
+        document.getElementById("login_Registro").style.display = "none";
+        document.getElementById("perfil_cierreSesion").style.display = "flex";
+
+        //Done: Agregar botón de cierre de sesión
+        //redirección a inicio
+            window.location = 'index.html';
         // Agregar botón de cerrar sesión si es necesario
     } else if (usuariosGuardados.some(usuario => usuario.correo === correo)) {
         // Si el correo es correcto pero la contraseña es incorrecta
@@ -170,5 +193,10 @@ formulario_login.addEventListener('submit', (e) => {
     }
 });
 
-//TODO: Agregar botón de cierre de sesión: Resetear todo 
-//TODO: Construir interfaz de perfil de usuario tras log in (Figma: Perfil logeado)
+//: Agregar botón de cierre de sesión: Resetear todo 
+document.getElementById("btn_cerrarSesion").addEventListener("click", () => {
+    //
+    localStorage.removeItem("usuarioActual");
+    location.reload();
+})
+//Done: Construir interfaz de perfil de usuario tras log in (Figma: Perfil logeado)
