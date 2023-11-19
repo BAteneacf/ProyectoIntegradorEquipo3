@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
       'id': 7
     });
   
-  addItem({'name':'Alejandra Lemus',
-      'img':'./src/Alejandra.png',
+  addItem({'name':'Almendra Zamudio',
+      'img':'./src/Almendra.png',
       'description':'HTML5 y CSS3',
       'id': 8
     });
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Define el contenido del modal para el octavo item
     const modalItem8 = {
         'id': 8,
-        'title': 'Alejandra Lemus',
+        'title': 'Almendra Zamudio',
         'description': 'Contenido del modal 8'
       };
 
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class "modal-body">
-            <img src="./src/Alejandra.png" style="heigth:230px; width:250px">
+            <img src="./src/Almendra.png" style="heigth:230px; width:250px">
               ${modalItem8.description}
             </div>
             <div class="modal-footer">
