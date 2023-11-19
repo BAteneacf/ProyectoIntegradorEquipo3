@@ -7,7 +7,7 @@ const formulario__login = document.getElementById("formulario__login");
 const expresiones = {
     usuario:/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, // Correo, números, letras, arroba, guión bajo
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    password: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guiones.
+    password: /^[a-zA-Z0-9\_\-]{4,12}$/, // Letras, numeros, guiones.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     telefono: /^(?!.*(\d)\1{4})\d{10}$/,
 }
@@ -95,6 +95,16 @@ formulario.addEventListener('submit', (e) => {
     // Obtener los datos actuales del localStorage
     let usuariosGuardados = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+    // Obtener la contraseña del input
+    let passwordInput = document.getElementById('password');
+    let password = passwordInput.value;
+
+    // Verificar si la contraseña es menor a 4 caracteres
+    if (password.length < 4) {
+        alert("La contraseña debe tener al menos 4 caracteres.");
+        return; // No permite continuar si la contraseña es menor a 4 caracteres
+    }
+
     // Verificar si los campos son válidos antes de continuar
     if (campos.nombre && campos.password && campos.correo && campos.telefono) {
         // Obtener los valores del formulario
@@ -102,6 +112,12 @@ formulario.addEventListener('submit', (e) => {
         let password = document.getElementById("password").value;
         let correo = document.getElementById("correo").value;
         let telefono = document.getElementById("telefono").value;
+
+        // Verificar si el correo ya está registrado
+        if (usuariosGuardados.some(usuario => usuario.correo === correo)) {
+        alert("Este correo electrónico ya está registrado. Por favor, utilice otro.");
+        return; //Si ya esta registrado el correo, no permite continuar
+        }
 
         // Crear un nuevo usuario
         let nuevoUsuario = {
