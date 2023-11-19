@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="card-body">
               <h5 class="card-title" style="text-align: center">${item.name}</h5>
               <p class="card-text" style="text-align: center">${item.description}</p>
-              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_${item.id}" style="margin-bottom:1rem; padding:25px; border:200px">+</a>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_${item.id}" style="margin-bottom:1rem; padding:25px; border:200px;">Ver más</a>
           </div>
       </div>
       <br/>`;
