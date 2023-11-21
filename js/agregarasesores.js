@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Imagen
-        if (!imagenSubida) {
-            mostrarError('Por favor, sube una imagen.');
-            return;
-        }
+        // if (!imagenSubida) {
+        //     mostrarError('Por favor, sube una imagen.');
+        //     return;
+        // }
 
         // Modal de éxito formulario
         var myModal = new bootstrap.Modal(document.getElementById('formularioValidoModal'));
