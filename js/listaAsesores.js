@@ -20,7 +20,7 @@ let listaAsesores = [
       'img': './src/lucero.png',
       'habilidad': 'Java, Trello y MySQL',
       'id': 3,
-      'description': 'Habilidad principal: JAVA. <br/> Habilidades adicionales: Trello y MySQL. <br/><br/> ¡Hola!Soy Jessica L. Olivera, una especialista en Java Full Stack con pasión por enseñar y perfeccionar habilidades técnicas y blandas en programación. Me apasiona aceptar desafíos y aprender constantemente. Y espero que pueda transmitirte todos mis conocimientos y energía',
+      'description': 'Habilidad principal: JAVA. <br/> Habilidades adicionales: Trello y MySQL. <br/><br/> ¡Hola! Soy Jessica L. Olivera, una especialista en Java Full Stack con pasión por enseñar y perfeccionar habilidades técnicas y blandas en programación. Me apasiona aceptar desafíos y aprender constantemente. Y espero que pueda transmitirte todos mis conocimientos y energía',
       'precio': '$150.00 / hora'
     },
     {
