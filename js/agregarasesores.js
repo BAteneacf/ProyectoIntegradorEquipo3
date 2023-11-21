@@ -120,9 +120,32 @@ function mostrarExitoImagen() {
     }, false);
 
     function validaHabilidad (id){
-        let imputradio=document.getElementById("flexRadioDefault" + id);
-        
-        let imputcheked=document.getElementById("flexCheckCheckedAdicional" + id);
-        imputcheked.disabled=imputradio.checked;
-        
+        let inputradio=document.getElementById("flexRadioDefault" + id);
+        let inputchekedlist=Array.from(document.getElementsByClassName ("check-input"));
+        console.log (inputchekedlist);
+        inputchekedlist.forEach(e=> {
+            e.disabled=false;
+        })
+        let inputcheked=document.getElementById("flexCheckCheckedAdicional" + id);
+        inputcheked.disabled=inputradio.checked;
+    
     }
+
+  function enviar () {
+   let nombre = document.getElementById("Name").value;
+   let correo = document.getElementById("Email").value;
+   let inputradiolist = Array.from(document.getElementsByClassName ("input-radio"));
+   let inputchekedlist = Array.from(document.getElementsByClassName ("check-input"));
+   let inputhorariolist = Array.from(document.getElementsByClassName ("input-horario"));
+   let inputpreciolist = Array.from(document.getElementsByClassName ("input-precio"));
+   let habilidadesPrincipales = inputradiolist.filter(x=>x.checked).map(y=>y.value);
+   let habilidadesAdicionales = inputchekedlist.filter(x=>x.checked).map(y=>y.value);
+   let horarios = inputhorariolist.filter(x=>x.checked).map(y=>y.value);
+   let precio = inputpreciolist.filter(x=>x.checked).map(y=>y.value);
+   let body={
+    nombre,correo, habilidadesPrincipales,habilidadesAdicionales, horarios, precio
+   }
+
+   console.log(body);
+}
+   
