@@ -75,9 +75,10 @@ document.getElementById('formulario')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'ENVIAR';
-      alert('Mensaje enviado correctamente');
+      appendAlert('Mensaje enviado correctamente', "success");
     }, (err) => {
       btn.value = 'ENVIAR';
       alert(JSON.stringify(err));
     });
 }); 
+

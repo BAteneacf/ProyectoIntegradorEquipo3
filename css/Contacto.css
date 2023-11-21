@@ -35,7 +35,7 @@ main {
 	width: 100%;
 	background: #fff;
 	border: 3px solid transparent;
-	border-radius: 3px;
+	border-radius: 30px;
 	height: 45px;
 	line-height: 45px;
 	padding: 0 40px 0 10px;
@@ -100,7 +100,7 @@ main {
 	align-items: center;
 }
 
-.formulario__btn {
+.button{
 	height: 45px;
 	line-height: 45px;
 	width: 30%;
@@ -108,7 +108,7 @@ main {
 	color: #fff;
 	font-weight: bold;
 	border: none;
-	border-radius: 3px;
+	border-radius: 30px;
 	cursor: pointer;
 	transition: .1s ease all;
 }
