@@ -1,8 +1,9 @@
 /* estilos página de Nosotros */
-body{
+
+#cuerpo{
   background: linear-gradient(0deg, #f13e8f 0%, rgba(255,255,255,1) 14%, rgba(255,255,255,1) 58%, rgba(22,214,250,1) 92%);
   background-repeat: no-repeat;
-  background-attachment:fixed;
+  /*background-attachment:fixed;*/
 
 }
 
@@ -142,15 +143,15 @@ border-bottom: 4px solid #f13e8f;
 /*footer*/
 .footer{
 background-color: #000000;
+/*background-attachment:fixed;*/
 }
 
 .footer a{
-color: white;
-text-decoration: none;
-margin-left: 3%;
+  color: #f13e8f;
+  text-decoration: none;
 }
 .footer p{
-color: white;
+  color: #f13e8f;
 }
 
 .row {
@@ -170,3 +171,8 @@ max-width: 100%;
 height: auto;
 }
 /*fin del footer*/
+
+#enlaces{
+  display: grid;
+  text-align: left;
+}

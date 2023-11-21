@@ -115,7 +115,7 @@ formulario.addEventListener('submit', (e) => {
 
         // Verificar si el correo ya está registrado
         if (usuariosGuardados.some(usuario => usuario.correo === correo)) {
-        alert("Este correo electrónico ya está registrado. Por favor, utilice otro.");
+        appendAlert("Este correo electrónico ya está registrado. Por favor, utilice otro.", "danger");
         return; //Si ya esta registrado el correo, no permite continuar
         }
 
@@ -137,7 +137,7 @@ formulario.addEventListener('submit', (e) => {
         formulario.reset();
 
         // Mostrar un mensaje de registro exitoso
-        alert("Registrado correctamente");
+        appendAlert("Registrado correctamente" ,"success");
 
         // Limpiar las clases de validación en los grupos correctos
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
@@ -180,7 +180,7 @@ formulario_login.addEventListener('submit', (e) => {
     if (usuarioEncontrado) {
         // Si las credenciales son correctas
         formulario_login.reset();
-        alert("Login exitoso");//TODO: cambiar alert por algo más
+        appendAlert("Login exitoso", "success");//TODO: cambiar alert por algo más
         //Buscar en el objeto el nombre, el correo y el password y actualizar el DOM
         document.getElementById("nombreDeUsuario").innerText = usuarioEncontrado.nombre;
         document.getElementById("perfil_correo").innerText = usuarioEncontrado.correo;
@@ -201,10 +201,10 @@ formulario_login.addEventListener('submit', (e) => {
         // Agregar botón de cerrar sesión si es necesario
     } else if (usuariosGuardados.some(usuario => usuario.correo === correo)) {
         // Si el correo es correcto pero la contraseña es incorrecta
-        alert("Contraseña incorrecta. Por favor, vuelva a intentar.");
+        appendAlert("Contraseña incorrecta. Por favor, vuelva a intentar.", "danger");
     } else {
         // Si el usuario no está registrado
-        alert("Usuario no encontrado. Por favor, regístrese.");
+        appendAlert("Usuario no encontrado. Por favor, regístrese." ,"warnig");
         // Redirigir o realizar otras acciones necesarias para el caso de un usuario no registrado
     }
 });

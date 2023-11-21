@@ -58,7 +58,7 @@ footer_div.className = "row";
 foot.append(footer_div);
 
 footer_div.insertAdjacentHTML("beforeend",`
-<div class="col">
+<div class="col" id="enlaces">
 <a href="#">Derechos de Autor</a>
 <a href="#">Aviso de Privacidad</a>
 <p>Derechos reservados BaByDevs</p>
@@ -72,7 +72,7 @@ footer_div.insertAdjacentHTML("beforeend",`
 `);
 
 footer_div.insertAdjacentHTML("beforeend",`
-<div class="col">
+<div class="col" id="redes">
 <a href="#"><img src="./src/facebook.png" alt="logo facebook"></a>
 <a href="#"><img src="./src/instagram.png" alt="logo instagram"></a>
 <a href="#"><img src="./src/linkedin.png" alt="logo linkedin"></a>
