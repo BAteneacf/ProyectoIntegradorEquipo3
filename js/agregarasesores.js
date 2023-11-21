@@ -1,6 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var imagenSubida = false;
+
+    // Cloudinary - imágenes
+    var myWidget = cloudinary.createUploadWidget({
+        cloudName: 'dfzy1rq7e',
+        uploadPreset: 'uw_test'
+    }, (error, result) => {
+        if (!error && result && result.event === "success") {
+            console.log('Done! Here is the image info: ', result.info);
+
+            // Marcar que se ha subido la imagen
+            imagenSubida = true;
+
+            // Mostrar mensaje de éxito
+            mostrarExitoImagen();
+        }
+    });
+
+    document.getElementById("upload_widget").addEventListener("click", function () {
+        myWidget.open();
+    }, false);
+
     document.getElementById('btnAgregar-form').addEventListener('click', function (event) {
         event.preventDefault();
+
         validarFormulario();
     });
 
@@ -57,16 +80,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Precio
-        var precio = document.querySelector('input[id^="flexCheckIndeterminatePrecio"]:checked');
+        var precio = document.querySelector('input[id^="flexRadioDefaultPrecio"]:checked');
         if (!precio) {
             mostrarError('Por favor, selecciona un precio.');
             return;
         }
 
-        // Modal de éxito
+        // Imagen
+        if (!imagenSubida) {
+            mostrarError('Por favor, sube una imagen.');
+            return;
+        }
+
+        // Modal de éxito formulario
         var myModal = new bootstrap.Modal(document.getElementById('formularioValidoModal'));
         myModal.show();
     }
+
+
 
     function mostrarError(mensaje) {
         var alerta = document.getElementById('alertValidaciones');
@@ -76,17 +107,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Cloudinary - imágenes
-    var myWidget = cloudinary.createUploadWidget({
-    cloudName: 'dfzy1rq7e',
-    uploadPreset: 'uw_test'
-    }, (error, result) => {
-    if (!error && result && result.event === "success") {
-        console.log('Done! Here is the image info: ', result.info);
-    }
-    }
-    )
+// Función para mostrar una alerta de éxito al subir la imagen
+function mostrarExitoImagen() {
+    alert('Imagen subida exitosamente!');
+    // Ocultar mensaje de error
+    var alerta = document.getElementById('alertValidaciones');
+    alerta.style.display = 'none';
+}
 
-    document.getElementById("upload_widget").addEventListener("click", function () {
-    myWidget.open();
-    }, false);

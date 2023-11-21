@@ -41,10 +41,6 @@
             height: 100%;
         }
 
-        .grid-container>* {
-            text-align: center;
-        }
-
         .header {
             grid-area: header;
         }
@@ -64,7 +60,6 @@
             gap: 10px;
             grid-template-areas:
                 "header"
-                /* "navbar" */
                 "main"
                 "footer"
             ;
@@ -77,7 +72,6 @@
                 grid-template-rows: auto;
                 grid-template-areas:
                     "header header"
-                    /* "navbar navbar" */
                     "main main"
                     "footer footer";
             }
@@ -90,7 +84,6 @@
                 grid-template-rows: auto;
                 grid-template-areas:
                     "header header header"
-                    /* "navbar navbar navbar" */
                     "main main main"
                     "footer footer footer";
             }
@@ -119,7 +112,7 @@
                     <div class="row">
 
                         <!-- CONTENEDOR 1: Datos Personales -->
-                        <div class=" p-3 rounded mb-4" id="nom">
+                        <div class=" p-4 rounded mb-4" id="nom">
                             <!-- NOMBRE -->
                             <div class="col-sm-12 col-md-6 mb-3">
                                 <label for="Name" class="form-name"><b>Nombre completo</b></label>
@@ -128,7 +121,7 @@
                             </div>
 
                             <!-- EMAIL -->
-                            <div class="mb-3">
+                            <div class="col-sm-12 col-md-6 mb-3">
                                 <label for="Email" class="form-email"><b>Correo electrónico</b></label>
                                 <input type="email" class="form-control" name="Email" id="Email"
                                     placeholder="Correo electrónico" value="" autocomplete="on">
@@ -185,10 +178,8 @@
                                 </div>
                             </div>
 
-                            <!-- CONTENEDOR: Habilidades Adicionales -->
-                            <div id="adi">
                                 <!-- HABILIDADES ADICIONALES -->
-                                <div class="col-sm-6 col-md-6 mb-3">
+                                <div class="col-sm-12 col-md-6 mb-3">
                                     <div class="form-check" id="form-hab-ad">
                                         <p for="description"><b>Habilidades adicionales</b></p>
                                         <div class="form-check">
@@ -241,7 +232,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
                         </div>
 
@@ -321,14 +311,37 @@
                             <!-- PRECIO -->
                             <div class="col-sm-12 col-md-6 mb-3">
                                 <div class="form-check" id="precio">
-                                    <p for="Precio"><b>Precio de asesoría</b></p>
+                                    <p for="Precio"><b>Precio de asesoría (por hora)</b></p>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="flexCheckIndeterminatePrecio">
-                                        <label class="form-check-label" for="flexCheckIndeterminatePrecio">$150</label>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefaultPrecio"
+                                            id="flexRadioDefaultPrecio9">
+                                        <label class="form-check-label" for="flexRadioDefault9">$150</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefaultPrecio"
+                                            id="flexRadioDefaultPrecio10">
+                                        <label class="form-check-label" for="flexRadioDefault10">$300</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefaultPrecio"
+                                            id="flexRadioDefaultPrecio11">
+                                        <label class="form-check-label" for="flexRadioDefault11">$450</label>
+                                    </div>
+                                </br>
+                                </br>
+                                </br>
+                                    <div style="text-align: right;">
+                                        <p><b>Modelo de negocio</b></p>
+                                        <p>
+                                            Ganancia del asesor 60% </br>
+                                            Impuestos + IVA 20% </br>
+                                            Ganancia de BabyDevs 20% </br>
+                                            *Más menos 13%
+                                            </p>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
@@ -389,7 +402,7 @@
 
 
 
-    <!-- Modal -->
+    <!-- Modal formulario-->
     <div class="modal fade" id="formularioValidoModal" tabindex="-1" aria-labelledby="formularioValidoModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
