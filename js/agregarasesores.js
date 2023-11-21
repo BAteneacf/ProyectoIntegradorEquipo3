@@ -7,13 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
         uploadPreset: 'uw_test'
     }, (error, result) => {
         if (!error && result && result.event === "success") {
-            console.log('Done! Here is the image info: ', result.info);
+            console.log('¡Hecho! Esta es la información de la imagen: ', result.info);
 
             // Marcar que se ha subido la imagen
             imagenSubida = true;
 
             // Mostrar mensaje de éxito
-            mostrarExitoImagen();
+            mostrarExitoImagen("¡Imagen añadida exitosamente!");
+            return;
         }
     });
 
@@ -108,16 +109,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Función para mostrar una alerta de éxito al subir la imagen
-function mostrarExitoImagen() {
-    alert('Imagen subida exitosamente!');
-    // Ocultar mensaje de error
-    var alerta = document.getElementById('alertValidaciones');
-    alerta.style.display = 'none';
+function mostrarExitoImagen(mensaje) {
+    var alertaI = document.getElementById('alertVImg');
+    var alertaITexto = document.getElementById('alertValImgText');
+    alertaITexto.textContent = mensaje;
+    alertaI.style.display = 'block';
 }
 
-    document.getElementById("upload_widget").addEventListener("click", function () {
-    myWidget.open();
-    }, false);
+    // document.getElementById("upload_widget").addEventListener("click", function () {
+    // myWidget.open();
+    // }, false);
 
     function validaHabilidad (id){
         let inputradio=document.getElementById("flexRadioDefault" + id);
@@ -128,7 +129,6 @@ function mostrarExitoImagen() {
         })
         let inputcheked=document.getElementById("flexCheckCheckedAdicional" + id);
         inputcheked.disabled=inputradio.checked;
-    
     }
 
   function enviar () {
@@ -148,4 +148,3 @@ function mostrarExitoImagen() {
 
    console.log(body);
 }
-   

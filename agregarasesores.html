@@ -102,8 +102,18 @@
     <main class="main">
         <h2 style="text-align: center;" id="agregar-as"><b>Agregar asesores</b></h2>
         <div class="container" id="main-asesores">
-            <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+            <!-- <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
                 <p id="alertValidacionesTexto"></p>
+            </div> -->
+            <div class="alert alert-danger fade show" role="alert" style="display:none;" id="alertValidaciones">
+                <h4 class="alert-heading">Chispitas :c</h4>
+                <p>Al parecer hubo un error en el llenado del formulario, verifica la información siguiente c:</p>
+                <hr>
+                <p class="mb-0" id="alertValidacionesTexto"></p>
+            </div>
+            <div class="alert alert-warning alert-dismissible fade show" style="display:none;" role="alert" id="alertVImg">
+                <p id="alertValImgText"></p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
             <div class="row justify-content-center align-items-center">
