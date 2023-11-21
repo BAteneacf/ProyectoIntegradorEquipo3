@@ -115,3 +115,14 @@ function mostrarExitoImagen() {
     alerta.style.display = 'none';
 }
 
+    document.getElementById("upload_widget").addEventListener("click", function () {
+    myWidget.open();
+    }, false);
+
+    function validaHabilidad (id){
+        let imputradio=document.getElementById("flexRadioDefault" + id);
+        
+        let imputcheked=document.getElementById("flexCheckCheckedAdicional" + id);
+        imputcheked.disabled=imputradio.checked;
+        
+    }
