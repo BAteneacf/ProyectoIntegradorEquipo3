@@ -1,3 +1,4 @@
+let imagen;
 document.addEventListener('DOMContentLoaded', function () {
     var imagenSubida = false;
 
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Marcar que se ha subido la imagen
             imagenSubida = true;
+            imagen = result.info.url;
 
             // Mostrar mensaje de éxito
             mostrarExitoImagen("¡Imagen añadida exitosamente!");
@@ -88,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Imagen
-        // if (!imagenSubida) {
-        //     mostrarError('Por favor, sube una imagen.');
-        //     return;
-        // }
+        if (!imagenSubida) {
+            mostrarError('Por favor, sube una imagen.');
+            return;
+        }
 
         // Modal de éxito formulario
         var myModal = new bootstrap.Modal(document.getElementById('formularioValidoModal'));
@@ -116,10 +118,6 @@ function mostrarExitoImagen(mensaje) {
     alertaI.style.display = 'block';
 }
 
-    // document.getElementById("upload_widget").addEventListener("click", function () {
-    // myWidget.open();
-    // }, false);
-
     function validaHabilidad (id){
         let inputradio=document.getElementById("flexRadioDefault" + id);
         let inputchekedlist=Array.from(document.getElementsByClassName ("check-input"));
@@ -143,7 +141,7 @@ function mostrarExitoImagen(mensaje) {
    let horarios = inputhorariolist.filter(x=>x.checked).map(y=>y.value);
    let precio = inputpreciolist.filter(x=>x.checked).map(y=>y.value);
    let body={
-    nombre,correo, habilidadesPrincipales,habilidadesAdicionales, horarios, precio
+    nombre,correo, habilidadesPrincipales,habilidadesAdicionales, horarios, precio, imagen
    }
 
    console.log(body);
