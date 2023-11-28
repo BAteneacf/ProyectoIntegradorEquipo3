@@ -34,7 +34,7 @@ function addItem(item) {
           <div class="card-body">
               <h5 class="card-title" style="text-align: center">${item.name}</h5>
               <p class="card-text" style="text-align: center">${item.habilidad}</p>
-              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_${item.id}" style="margin-bottom:1rem; padding:8px; margin:10px 100px; border:100px; display:flex; justify-content: center">Ver más</a>
+              <a href="#" class="btn btn-primary" id="btn-asesores" data-bs-toggle="modal" data-bs-target="#exampleModal_${item.id}" style="width: 40%; display:flex; justify-content: center">Ver más</a>
           </div>
       </div>
       <br/>`;

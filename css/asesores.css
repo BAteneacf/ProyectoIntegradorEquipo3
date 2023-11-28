@@ -69,3 +69,16 @@
     background-color: red;
     color: black;
 }
+
+#btn-asesores {
+    margin-left: 29%;
+    margin-right: 29%;
+    border: 2px solid #f5790c;
+    border-radius: 20px;
+    font-size: 15px;
+    background: #f5790c;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    outline: none;
+}
