@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <!-- <link rel="stylesheet" href="CSS/style.css"> -->
     <link rel="stylesheet" href="css/agregarasesores.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://getbootstrap.com/docs/5.2/examples/checkout/form-validation.css" rel="stylesheet">
@@ -35,6 +34,9 @@
 
         body {
             min-height: 100%;
+            background: linear-gradient(180deg, #F13E8F 0%, #FFF 100%);
+            background-repeat: no-repeat;
+            background-attachment:fixed;
         }
 
         html {
@@ -100,7 +102,7 @@
     </header>
 
     <main class="main">
-        <h2 style="text-align: center;" id="agregar-as"><b>Agregar asesores</b></h2>
+        <h2 style="text-align: center; font-style: italic;" id="agregar-as"><b>Agregar asesores</b></h2>
         <div class="container" id="main-asesores">
             <!-- <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
                 <p id="alertValidacionesTexto"></p>
@@ -120,29 +122,38 @@
             <div class="row justify-content-center align-items-center">
 
                 <form class="needs-validation" novalidate id="formulario">
-                    <div class="row">
+                    <div class="row justify-content-center align-items-center">
 
-                        <!-- CONTENEDOR 1: Datos Personales -->
-                        <div class=" p-4 rounded mb-4" id="nom">
-                            <!-- NOMBRE -->
-                            <div class="col-sm-12 col-md-6 mb-3">
-                                <label for="Name" class="form-name"><b>Nombre completo</b></label>
-                                <input type="text" class="form-control" name="Name" id="Name"
-                                    placeholder="Nombre completo" value="" autocomplete="on">
+                        
+                            <!-- CONTENEDOR 1: Datos Personales -->
+                            <div class="p-4 mb-4 text-center mx-auto" id="nom">
+                                <!-- TÍTULO -->
+                                <h4 class="mb-4" style="text-align: left; color: #16D6FA;"><strong>Datos Personales</strong></h4>
+                        
+                                <!-- NOMBRE -->
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 mb-3">
+                                        <label for="Name" class="form-name"><b>Nombre completo</b></label>
+                                        <input type="text" class="form-control" name="Name" id="Name"
+                                            placeholder="Nombre completo" value="" autocomplete="on">
+                                    </div>
+                        
+                                    <!-- EMAIL -->
+                                    <div class="col-sm-12 col-md-6 mb-3">
+                                        <label for="Email" class="form-email"><b>Correo electrónico</b></label>
+                                        <input type="email" class="form-control" name="Email" id="Email"
+                                            placeholder="Correo electrónico" value="" autocomplete="on">
+                                    </div>
+                                </div>
                             </div>
-
-                            <!-- EMAIL -->
-                            <div class="col-sm-12 col-md-6 mb-3">
-                                <label for="Email" class="form-email"><b>Correo electrónico</b></label>
-                                <input type="email" class="form-control" name="Email" id="Email"
-                                    placeholder="Correo electrónico" value="" autocomplete="on">
-                            </div>
-                        </div>
 
                         <!-- CONTENEDOR 2: Habilidades -->
-                        <div class="p-3 rounded mb-4" id="hab">
+                        <div class="p-3 mb-4 text-center mx-auto" id="hab">
+                        <!-- TÍTULO -->
+                        <h4 class="mb-4" style="text-align: left; color: #A16DFE;"><strong>Habilidades</strong></h4>
                             <!--HABILIDAD PRINCIPAL  -->
-                            <div class="col-sm-12 col-md-6 mb-3">
+                            <div class="row">
+                            <div class="col-sm-12 col-md-6 mb-3 d-flex justify-content-center">
                                 <div class="form-check" id="form-hab">
                                     <p for="description"><b>Habilidad principal</b></p>
                                     <div class="form-check">
@@ -190,7 +201,7 @@
                             </div>
 
                                 <!-- HABILIDADES ADICIONALES -->
-                                <div class="col-sm-12 col-md-6 mb-3">
+                                <div class="col-sm-12 col-md-6 mb-3 d-flex justify-content-center">
                                     <div class="form-check" id="form-hab-ad">
                                         <p for="description"><b>Habilidades adicionales</b></p>
                                         <div class="form-check ">
@@ -243,7 +254,7 @@
                                         </div>
                                     </div>
                                 </div>
-
+                            </div>
                         </div>
 
 
@@ -251,9 +262,12 @@
 
 
                         <!-- CONTENEDOR 3: Horarios y Precio -->
-                        <div class="p-3 rounded mb-4" id="hor">
+                        <div class="p-3 mb-4" id="hor">
+                        <!-- TÍTULO -->
+                        <h4 class="mb-4" style="text-align: left; color: #F6790D;"><strong>Horarios y precios</strong></h4>
                             <!-- HORARIO -->
-                            <div class="col-sm-12 col-md-6 mb-3">
+                            <div class="row">
+                            <div class="col-sm-12 col-md-6 mb-3 d-flex justify-content-center">
                                 <div class="form-check" id="horario">
                                     <p for="Precio"><b>Horarios de asesorías</b></p>
                                     <div class="form-check">
@@ -320,7 +334,7 @@
                             </div>
 
                             <!-- PRECIO -->
-                            <div class="col-sm-12 col-md-6 mb-3">
+                            <div class="col-sm-12 col-md-6 mb-3 d-flex justify-content-center">
                                 <div class="form-check" id="precio">
                                     <p for="Precio"><b>Precio de asesoría (por hora)</b></p>
                                     <div class="form-check">
@@ -352,27 +366,30 @@
                                     </div>
                                 </div>
                             </div>
-
+                        
                         </div>
 
                     </div>
 
 
-                    <!-- BOTONES -->
-                <div id="boton">
-                    <div id="container-botones">
-                        <div class="col-md-12 order-md-1 mx-auto text-md-start" id="boton-img">
+                    <!-- IMÁGENES -->
+                    <div class="p-3 mb-4" id="ag-imagen">
+                        <!-- TÍTULO -->
+                        <h4 class="mb-4" style="text-align: left; color: #F13E8F;"><strong>Imagen de perfil</strong></h4>
+                        <div class="col-md-12 order-md-1 mx-auto d-flex justify-content-center" id="boton-img">
                             <button id="upload_widget" class="btn btn-primary btn-lg btn-block">Añadir
                                 imagen</button>
                         </div>
+                    </div>
+
+                    <!-- BOTONES AGREGAR Y LIMPIAR -->
+                <div id="botones">
                         <div class="col-md-12 order-md-1 mx-auto text-md-end" id="botones-al">
                             <button id="btnClear-form" class="btn btn-primary btn-lg btn-block"
                                 type="button">Limpiar</button>
                             <button id="btnAgregar-form" class="btn btn-primary btn-lg btn-block"
                                 onclick="enviar ()">Agregar</button>
                         </div>
-
-                    </div>
                 </div>
 
 
