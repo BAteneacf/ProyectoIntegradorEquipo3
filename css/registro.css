@@ -9,7 +9,7 @@
 body{
     
         
-    background: linear-gradient(#a06dff, #fffefe);
+    background: linear-gradient(180deg, #16D6FA 0%, #FFF 86.11%);
    
     background-size: cover;
     background-repeat: no-repeat;
@@ -101,7 +101,7 @@ main{
     /*background-image: url(./img/FondoU2.jpg);*/
     width: 100%;
     padding: 60px 20px;
-    background: #16d6fa;
+    background: #A16DFE;
     position: absolute;
     border-radius: 20px;
    

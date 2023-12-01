@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    document.getElementById("upload_widget").addEventListener("click", function () {
+    document.getElementById("upload_widget").addEventListener("click", function (event) {
+        event.preventDefault();
         myWidget.open();
     }, false);
 
@@ -146,3 +147,15 @@ function mostrarExitoImagen(mensaje) {
 
    console.log(body);
 }
+
+function agregarAasesores(nombre, habilidadesPrincipales, habilidadesAdicionales, horarios, precio, imagen){
+    let asesoresTexto = localStorage.getItem("listaAsesores");
+    let lista;
+    if(!asesoresTexto){
+      lista = {asesores:[],total:0};
+    }else{
+      lista = JSON.parse(localStorage.getItem("listaAsesores"));
+    }
+    lista.asesores.push({nombre, habilidadesPrincipales, habilidadesAdicionales, horarios, precio, imagen});
+    localStorage.setItem("listaAsesores",JSON.stringify(lista));
+  }
