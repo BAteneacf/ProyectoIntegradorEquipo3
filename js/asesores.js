@@ -9,10 +9,10 @@ function modalFormat (info) {
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-nombre">
-              <h1 class="modal-name fs-5" id="exampleModalLabel">${info.name}</h1>
+              <p class="modal-name fs-5" ><strong>${info.name}</strong></p>
             </div>
             <div class= "modal-body">
-            <img id="imagenesAsesores" src="${info.img}" style="heigth:250px; width:250px; display: flex; align-items: center;">
+            <img id="imagenesAsesores" src="${info.img}" style="heigth:550px; width:250px; display: flex; align-items: center;">
               
             <p id="descripcionAsesor"> ${info.description} </p>
             </div>
@@ -29,12 +29,13 @@ function modalFormat (info) {
 }
 
 function addItem(item) {
-  const itemHTML = `<div class="card" style="width: 18rem; padding: 10px; margin-bottom: 30px; margin-right: 20px; style= "object-fit:contain; padding:5px">
-          <img src="${item.img}" class="card-img-top" alt="image">
-          <div class="card-body">
+  const itemHTML = `<div class="card" style="width: 18rem; padding: 10px; margin-bottom: 50px; margin-right: 50px; object-fit:contain; padding:20px" 
+  data-aos="flip-left">
+          <img id="imagenAsesor" src="${item.img}" class="card-img-top" alt="image">
+          <div class="card-body" >
               <h5 class="card-title" style="text-align: center">${item.name}</h5>
               <p class="card-text" style="text-align: center">${item.habilidad}</p>
-              <a href="#" class="btn btn-primary" id="btn-asesores" data-bs-toggle="modal" data-bs-target="#exampleModal_${item.id}" style="width: 40%; display:flex; justify-content: center">Ver más</a>
+              <a href="#" class="btn btn-primary" id="btn-asesores" data-bs-toggle="modal" data-bs-target="#exampleModal_${item.id}">Ver más</a>
           </div>
       </div>
       <br/>`;

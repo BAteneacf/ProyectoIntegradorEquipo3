@@ -23,8 +23,7 @@ body{
 
 
 .card:hover {
- background-color:#83c02e91 ; 
- 
+ background-color:#83c02e ;
 }
 
 
@@ -56,6 +55,110 @@ body{
 }
 
 
+.cardsEquipo{
+  border: 1px solid #000;
+  object-fit:contain; 
+  margin-bottom: 25px; 
+  margin-right: 25px;
+  background: #fff;
+  box-shadow: 5px 5px 0px 0px  #000;
+  min-height: 700px;
+}
+
+/* Styles del nombre */
+.nombreAsesor{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.descrip{
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* Redes Sociales de contacto */
+.contactoNosotras{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.linkedin2{
+  display: flex;
+  float: right;
+  align-items: center;
+  padding: 5px;
+
+  animation-name: wobble;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* .linkedin2:hover{
+  background-color: f5790c;
+} */
+
+
+.git{
+  display: flex;
+  float: right;
+  align-items: center;
+  padding: 5px;
+  transition: 0.3s;
+
+  animation-name: wobble;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* .git:hover{
+  transform: scale(1.3);
+} */
+
+.cv{
+  display: flex;
+  float: right;
+  align-items: center;
+  padding: 5px;
+  transition: 0.3s;
+
+  animation-name: wobble;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* .cv:hover{
+  transform: scale(1.3);
+} */
+
+@keyframes wobble {
+  0% {transform: translateX(0) rotate(0deg);}
+  15% {transform: translateX(-30px) rotate(-5deg);}
+  30% {transform: translateX(15px) rotate(3deg);}
+  45% {transform: translateX(-15px) rotate(-3deg);}
+  60% {transform: translateX(9px) rotate(2deg);}
+  75% {transform: translateX(-6px) rotate(-1deg);}
+  100% {transform: translateX(0) rotate(0deg);}
+}
+/* Redes Sociales de contacto */
+
+#babyDevs{
+  text-align: center;
+  font-size: xxx-large;
+}
+
+#conoceAlEquipo{
+  text-align: center;
+  font-size: 60px;
+  color: #f5790c;
+}
+
+#unete{
+  font-size: 60px;
+  color: #f5790c;
+}
+
+
 @media(max-width: 576px) { 
  .card-text {
    font-size: 0.8rem;
@@ -63,21 +166,22 @@ body{
 }
 
 /*Footer, logo y redes*/
-.logo {
+/* .logo {
   text-align: center;
 }
 
 .redes {
   
   text-align: right;
-}
+} */
 /*Footer, logo y redes*/
+
+
 
 /*Carrusel*/ 
 .carousel { 
   width: 90%; 
-  margin: auto;
-
+  margin: auto ;
 }
 
 .slick-slide { /* Este le da espacio entre cada "contenedor" de img.*/
@@ -88,8 +192,9 @@ display: block;
 margin:auto;
 max-width: 100%;
 height: 80%;
-border-radius: 10%;
-border-style:outset;
+border-radius: 40px;
+border: 1.5px solid #000;
+/* border-style:outset; */
 }
 
 .description {
@@ -98,7 +203,7 @@ border-style:outset;
 }
 
 .slick-prev, .slick-next {
-background-color: #68bccb7a;
+background-color: #B5F2DC;
 color: #fff;
 padding: 10px;
 font-size: 30px;
@@ -111,12 +216,12 @@ top: 50%; /* Manda los botones al centro del carrusel. */
 }
 
 .slick-prev {
-left: 0; /* Coloca el botón < a la izquierda */
+left: -80px; /* Coloca el botón < a la izquierda */
 z-index: 1; /* El méndigo botón se me ponía atrás de la imagen así que tuve que ponerle este para que lo mandara al frente jajaja*/
 }
 
 .slick-next {
-right: 0; /* Coloca el botón > a la derecha */
+right: -60px; /* Coloca el botón > a la derecha */
 }
 
 

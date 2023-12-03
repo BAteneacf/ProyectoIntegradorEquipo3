@@ -3,10 +3,10 @@ $(document).ready(function () {
     slidesToShow: 3, 
     slidesToScroll: 1, 
     arrows: true,
-    prevArrow: '<button type="button" class="slick-prev"><b>⇠</b></button>',
-    nextArrow: '<button type="button" class="slick-next"><b>⇢</b></button>',
+    prevArrow: '<button type="button" class="slick-prev"><b> < </b></button>', //⇠
+    nextArrow: '<button type="button" class="slick-next"><b> > </b></button>', //⇢
     autoplay: true,
-    autoplaySpeed: 2000, 
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 768,
