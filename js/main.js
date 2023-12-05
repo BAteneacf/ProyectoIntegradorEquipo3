@@ -51,32 +51,48 @@ ul1.insertAdjacentHTML("beforeend", `<li class="nav-item">
 
 //footer
 let foot = document.getElementsByClassName("container text-center").item(0);
-foot.className = "container text-center";
+foot.id = "footer_container";
+
 
 let footer_div = document.createElement("div");
 footer_div.className = "row";
+footer_div.id = "footer_div";
 foot.append(footer_div);
 
 footer_div.insertAdjacentHTML("beforeend",`
-<div class="col" id="enlaces">
-<a href="#">Derechos de Autor</a>
-<a href="#">Aviso de Privacidad</a>
-<p>Derechos reservados BaByDevs</p>
+    <div class="col footer_divs">
+        <a href="./index.html">
+            <img id="footer_logo" src="./src/logo_vector_blanco_500x150.svg" alt="Baby Devs Logo">
+        </a>
+    </div>
+`);
+
+footer_div.insertAdjacentHTML("beforeend",`
+<div class="col footer_divs">
+  <div class="footer_links">
+    <img class="rs_icons" src="./src/instagram-icono-blanco.png" alt="logo instagram">
+    <img class="rs_icons" src="./src/linkedin-icono-blanco.png" alt="logo linkedin">
+    <img class="rs_icons" src="./src/facebook-icono-blanco.png" alt="logo facebook">
+  </div>
+  <div class="footer_links">
+    <ul>
+        <ul class="footer_link">
+            <a href="#">Derechos de Autoras</a>
+        </ul>      
+        <ul class="footer_link">
+            <a href="#">Aviso de Privacidad</a>
+        </ul>        
+        <ul class="footer_link">
+            <a href="#">Derechos Reservados</a>
+        </ul>
+    </ul>
+    </div>
 </div>
 `);
 
 footer_div.insertAdjacentHTML("beforeend",`
-<div class="col">
-<img src="./src/logo_vector_blanco_500x150.svg">
-</div>
-`);
-
-footer_div.insertAdjacentHTML("beforeend",`
-<div class="col" id="redes">
-<a href="#"><img src="./src/facebook.png" alt="logo facebook"></a>
-<a href="#"><img src="./src/instagram.png" alt="logo instagram"></a>
-<a href="#"><img src="./src/linkedin.png" alt="logo linkedin"></a>
-<a href="#"><img src="./src/tik-tok.png" alt="logo tiktok"></a>
+<div class="col footer_divs">
+  <button id="footer_btn" type="button" class="btn">Contáctanos</button>
 </div>
 `);
 
