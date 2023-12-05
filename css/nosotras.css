@@ -186,6 +186,7 @@ body{
 
 .slick-slide { /* Este le da espacio entre cada "contenedor" de img.*/
   padding: 50px;
+  border-radius: 20px;
 }
 .slick-slide img {
 display: block;
@@ -203,8 +204,8 @@ border: 1.5px solid #000;
 }
 
 .slick-prev, .slick-next {
-background-color: #B5F2DC;
-color: #fff;
+background-color: #83c02eca;
+color: #f13e8f;
 padding: 10px;
 font-size: 30px;
 border: none;
@@ -213,20 +214,42 @@ width: 4rem;
 height: 4rem;
 position: absolute;
 top: 50%; /* Manda los botones al centro del carrusel. */
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .slick-prev {
-left: -80px; /* Coloca el botón < a la izquierda */
+left: -40px; /* Coloca el botón < a la izquierda */
 z-index: 1; /* El méndigo botón se me ponía atrás de la imagen así que tuve que ponerle este para que lo mandara al frente jajaja*/
 }
 
 .slick-next {
-right: -60px; /* Coloca el botón > a la derecha */
+right: -20px; /* Coloca el botón > a la derecha */
 }
 
+@media(max-width: 576px) { 
+  .slick-prev, .slick-next {
+    width: 3rem;
+    height: 3rem;
+  }
+  .slick-prev {
+    left: -12px; /* Coloca el botón < a la izquierda */
+    z-index: 1; /* El méndigo botón se me ponía atrás de la imagen así que tuve que ponerle este para que lo mandara al frente jajaja*/
+    }
 
+    .slick-next {
+      right: 9px /* Coloca el botón > a la derecha */
+      }
+ }
 
+ .correo{
+  font-size: 30px;
+ }
 
+ @media(max-width: 576px){
+  .correo{
+    font-size: 20px;
+  }
+ }
 
 
 
