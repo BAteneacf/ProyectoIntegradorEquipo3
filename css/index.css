@@ -122,12 +122,12 @@ body{
   }
   
   .tarjeta {
-    border: 3px solid #000;
+    border: 3px solid #F13E8F;
     padding: 20px; 
     width: calc(33.33% - 20px); 
     box-sizing: border-box; 
     border-radius: 20px;
-    box-shadow: 10px 10px 2px #000000;
+    box-shadow: 10px 10px 2px #A06DFF;
     margin: 10px;
   }
 
@@ -163,14 +163,16 @@ body{
   }
   
   .imgdos img {
-    box-shadow: 15px 15px 2px rgb(255, 255, 255);
-    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 15px 15px 2px #F13E8F;
+    border: 2px solid #F13E8F;
     border-radius: 20px;
+    padding: 20px;
   }
   
   .sep2{
-    font-size: 30px;
-    color: white;
+    font-style: italic;
+    font-size: 40px;
+    color: #FFC603;
     background-color: #000000;
     padding: 18px;
     display: block;
