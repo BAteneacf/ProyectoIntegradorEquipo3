@@ -78,10 +78,10 @@ footer_div.insertAdjacentHTML("beforeend",`
     <ul>
         <ul class="footer_link">
             <a href="#">Derechos de Autoras</a>
-        </ul>      
+        </ul>
         <ul class="footer_link">
             <a href="#">Aviso de Privacidad</a>
-        </ul>        
+        </ul>
         <ul class="footer_link">
             <a href="#">Derechos Reservados</a>
         </ul>
