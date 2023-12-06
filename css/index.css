@@ -97,13 +97,16 @@ body{
     text-align: center;
 }
 
-#unotitle{
-    font-size: 20px;
+.unotitle{
+    font-size: 25px;
+    text-align: center;
 }
 
 #dostitle{
-    font-size: 30px;
+    font-size: 35px;
 }
+
+
 
 
 .tarjetitasayuda {
@@ -129,6 +132,20 @@ body{
     font-size: 14px;
     text-align: justify;
   }
+
+  @media screen and (max-width: 768px) {
+    .tarjetitasayuda {
+      flex-direction: column;
+      align-items: center; 
+      padding: 3%; 
+    }
+    
+    .tarjeta {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+  }
+  
 
    /* ------------Separador 2---------- */
   
@@ -160,13 +177,34 @@ body{
   text-align: justify;
 }
 
+@media screen and (max-width: 768px) {
+  .sep2 {
+    flex-direction: column; 
+    text-align: center; 
+    padding: 3%; 
+    font-size: 20px; 
+  }
+  
+  .izq, .imgdos {
+    width: 100%; 
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .imgdos {
+    order: -1; 
+  }
+}
+
+
  /* ------------Tarjetas de colores---------- */
 
 .trjt {
   display: flex;
+  flex-direction: row;
   border-radius: 20px;
-  overflow: hidden;
-  margin: 30px;
+  margin: 30px auto;
+  align-items: center;
 }
 
 .imgtrjt {
@@ -178,7 +216,6 @@ body{
 .imgtrjt img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
 }
 
 .txttrjt {
@@ -201,34 +238,39 @@ body{
 .amarillo,
 .rosa {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
   margin-bottom: 20px;
   padding: 20px;
+  transition: transform 0.3s ease;
 }
 
-.naranja,
-.verde,
-.amarillo,
-.rosa:hover{
-  outline: 0;
+.naranja:hover,
+.verde:hover,
+.amarillo:hover,
+.rosa:hover {
+  transform: scale(1.05); 
 }
 
 .colorestrjrt {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .trjt {
   width: calc(40% - 20px);
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 767px) {
   .trjt {
-    width: 100%;
+    flex-direction: row;
+    width: 60%; 
+    margin-left: -20px;
+    
   }
 }
 
