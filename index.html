@@ -9,69 +9,73 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
     <style>
-      * {
-        padding: 0;
-        margin: 0;
-      }
+    * {
+      padding: 0;
+      margin: 0;
+    }
 
-      body {
+    /* body {
         min-height: 100vh;
         display: grid;
         grid-template-rows: auto 1fr auto;
         margin: 0;
-      }
+      } */
 
-      html {
-        height: 100%;
-      }
+    html {
+      height: 100%;
+    }
 
-      .header {
-        grid-area: header;
-      }
+    .header {
+      grid-area: header;
+    }
 
-      .main {
-        grid-area: main;
-        padding: 5%;
-      }
-      .footer {
-        grid-area: footer;
-      }
+    .main {
+      grid-area: main;
+      padding: 5%;
+    }
 
-      /*REPONSIVO*/
-      /*Teléfono*/
+    .footer {
+      grid-area: footer;
+    }
+
+    /*REPONSIVO*/
+    /*Teléfono*/
+    .grid-container {
+      /* display: grid; */
+      gap: 10px;
+      grid-template-areas:
+        "header"
+        "navbar"
+        "main"
+        "article"
+        "footer";
+    }
+
+    /*Tablet*/
+    @media (min-width: 768px) {
       .grid-container {
-        display: grid;
-        gap: 10px;
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto 1fr auto;
         grid-template-areas:
-          "header"
-          /*"navbar"*/
-          "main"
-          "article"
-          "footer";
+          "header header"
+          /*"navbar navbar"*/
+          "main main"
+          "footer footer";
       }
-      /*Tablet*/
-      @media (min-width: 768px) {
-        .grid-container {
-          grid-template-columns: 300px auto;
-          grid-template-rows: auto 1fr auto;
-          grid-template-areas:
-            "header header"
-            /*"navbar navbar"*/
-            "main main"
-            "footer footer";
-        }
+    }
+
+    /*Escritorio*/
+    @media (min-width: 900px) {
+      .grid-container {
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "header header header"
+          /*"navbar navbar navbar"*/
+          "main main main"
+          "footer footer footer";
       }
-      /*Escritorio*/
-      @media (min-width: 900px) {
-        .grid-container {
-          grid-template-columns: 300px auto;
-          grid-template-rows: auto 1fr auto;
-          grid-template-areas:
-            "header header header"
-            /*"navbar navbar navbar"*/
-            "main main main"
-            "footer footer footer";
-        }
+    }
       }
     </style>
   </head>
@@ -81,24 +85,23 @@
         <nav class="navbar navbar-expand-sm bg-body-tertiary"></nav>
     </header>
 
-    <main class="main">
 
       <div class="primero">
         <div class="izq">
         <div>
-      <p id="babydevstitle">Baby Devs</p>
-      <p id="laayuda">"Conocimiento a tu medida, <br> por mujeres, para ti"</p>
+      <p id="babydevstitle"> <b>BABY DEVS</b></p>
+      <p id="laayuda"><b>"Conocimiento a tu medida, <br> por mujeres, para ti"</b></p>
     </div>
 <br><br>
     <div id="btnagendar">
-        
+      <a style="text-decoration: none;" href="/asesores.html" target="_blank">
             <button class="button-56" role="button">Agendar</button>
-     
+          </a>
     </div>
   </div>
 
     <div class="imguno">
-      <img src="https://i.pinimg.com/564x/98/32/23/9832233188208667ee06a4e4b2ef11fe.jpg" alt="img" width="300px" height="300px">
+      <img src="./src/wemen.png" alt="img" width="300px" height="300px">
     </div>
 
   </div>
@@ -138,23 +141,22 @@
   <p class="tres">¿Cómo te ayudamos?</p> -->
 </div>
   <div class="imgdos">
-    <img src="https://i.pinimg.com/564x/98/32/23/9832233188208667ee06a4e4b2ef11fe.jpg" alt="img" width="200px" height="200px">
+    <img src="./src/wemen.png" alt="img" width="250px" height="250px">
   </div>
 </div>
 
 <div class="colorestrjrt">
   <div class="trjt">
+    <a style="text-decoration: none;" href="/asesores.html" target="_blank">
 <div class="naranja">
   <div class="imgtrjt">
   <img src="https://images.vexels.com/media/users/3/191468/isolated/preview/fbc22bee8d7354f3cbcc23577eabc002-gato-lindo-mexicano.png" alt="alebrije" width="200px" height="200px">
 </div>
 <div class="txttrjt">
-  <p class="colorestxt">¿Cómo te ayudamos?</p>
-  <p class="colorestxt">¿Cómo te ayudamos?</p>
-  <p class="colorestxt">¿Cómo te ayudamos?</p>
-  <p class="colorestxt chiki">¿Cómo te ayudamos?</p>
+  <p class="colorestxt">¿Tienes alguna sugerencia? ¡Por favor ponte en contacto con nosotras!</p>
 </div>
 </div>
+</a>
 </div>
 <div class="trjt">
 <div class="verde">
@@ -214,8 +216,6 @@
 </div>      
 </div>
 
-
-    </main>
     
     <footer class="footer">
       <div class="container text-center">

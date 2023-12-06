@@ -1,3 +1,10 @@
+body{
+  background: linear-gradient(180deg, #16D6FA 0%, #FFF 86.11%);
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+
+}
+
 
  /* ------------Lo primero---------- */
 
@@ -5,12 +12,15 @@
     font-size: 50px;
     color: #000000;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
   }
 #laayuda{
     font-size: 25px;
+    font-family: sans-serif;
 }
 
 .primero{
+  margin-top: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,6 +49,7 @@
   .primero {
     flex-direction: column;
     align-items: center;
+    margin-left: 15px;
   }
 
   .imguno {
@@ -46,9 +57,9 @@
     margin-top: 20px;
     width: 80%; 
     max-width: 300px; 
-    margin-left: -35px; 
     margin-right: auto; 
     margin-top: 70px;
+    margin-left: 15px;
   }
 
   .izq{
@@ -56,12 +67,14 @@
     margin-top: 20px;
     width: 80%; 
     max-width: 300px; 
-    margin-left: -35px; 
     margin-right: auto; 
+    margin-left: 15px;
   }
 }
 
-
+*{
+  font-family: sans-serif;
+}
 
 
  /* ------------Separador 1---------- */
@@ -149,35 +162,77 @@
 
  /* ------------Tarjetas de colores---------- */
 
- .colorestrjrt{
+.trjt {
   display: flex;
-  gap: 20px;
-  padding: 20px;
- }
-
- .trjt{
-  display: inline-flex;
   border-radius: 20px;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
- }
+  overflow: hidden;
+  margin: 30px;
+}
 
- .imgtrjt{
+.imgtrjt {
+  display: flex;
   align-items: center;
-  display: block;
- }
- 
- .colorestxt{
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-right: 20px;
+}
+
+.imgtrjt img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.txttrjt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.colorestxt {
   font-size: 20px;
   text-align: center;
-  display: block;
- }
+  margin: 0;
+  text-align: justify;
+  color: #000;
+}
 
- .chiki{
-  font-size: 15px;
-  text-align: center;
- }
+
+.naranja,
+.verde,
+.amarillo,
+.rosa {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.naranja,
+.verde,
+.amarillo,
+.rosa:hover{
+  outline: 0;
+}
+
+.colorestrjrt {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trjt {
+  width: calc(40% - 20px);
+}
+
+@media screen and (max-width: 600px) {
+  .trjt {
+    width: 100%;
+  }
+}
+
+
 
  .naranja {
   background-color: #F5790C;
@@ -222,6 +277,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    font-family: sans-serif;
   }
   
   .button-56:after {
