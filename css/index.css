@@ -106,8 +106,13 @@ body{
     font-size: 35px;
 }
 
+#uno{
+  font-size: 35px;
+}
 
-
+#dos{
+  font-size: 25px;
+}
 
 .tarjetitasayuda {
     display: flex;
@@ -121,6 +126,9 @@ body{
     padding: 20px; 
     width: calc(33.33% - 20px); 
     box-sizing: border-box; 
+    border-radius: 20px;
+    box-shadow: 10px 10px 2px #000000;
+    margin: 10px;
   }
 
   .titletrjt{
@@ -355,3 +363,12 @@ body{
       padding: 0 40px;
     }
   }
+
+.sep3{
+  background-color: #000000;
+  font-size: 30px;
+  color: white;
+  padding: 18px;
+  display: block;
+  text-align: center;
+}
