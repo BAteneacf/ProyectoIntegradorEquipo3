@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $('.carousel').slick({
-    slidesToShow: 3, 
-    slidesToScroll: 1, 
+    slidesToShow: 3,
+    slidesToScroll: 1,
     arrows: true,
     prevArrow: '<button type="button" class="slick-prev"><b> ⇠ </b></button>', //⇠
     nextArrow: '<button type="button" class="slick-next"><b> ⇢ </b></button>', //⇢
