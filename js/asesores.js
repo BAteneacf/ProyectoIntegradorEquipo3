@@ -23,7 +23,7 @@ function modalFormat (info) {
               <h4 class="modal-price fs-5" id="exampleModalLabel">${info.precio} / hora</h4>
             </div>
             <div class="modal-footer">
-              <button type="button" onclick="agregarACarrito(${info.id}, '${info.name}', '${info.img}')" class="btn2 btn-secondary" data-bs-dismiss="modal">Agregar asesoría</button>
+              <button type="button" onclick="agregarACarrito(${info.id}, '${info.name}', '${info.horarios[0]}', '${info.precio}', '${info.img}')" class="btn2 btn-secondary boton-item" data-bs-dismiss="modal">Agregar asesoría</button>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ function addItem(item) {
   itemsContainer.innerHTML += itemHTML;
 }
 
-function agregarACarrito(id, nombre, img){
+function agregarACarrito(id, nombre, horario, precio, img){
   let carritoTexto = localStorage.getItem("carrito");
   let carrito;
   if(!carritoTexto){
@@ -55,7 +55,8 @@ function agregarACarrito(id, nombre, img){
   }else{
     carrito = JSON.parse(localStorage.getItem("carrito"));
   }
-  carrito.asesores.push({id,nombre,img});
+  carrito.asesores.push({id,nombre,horario, precio, img});
+  carrito.total += 1;
   localStorage.setItem("carrito",JSON.stringify(carrito));
 }
 
