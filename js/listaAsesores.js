@@ -110,7 +110,7 @@ let listaAsesores = [
       'precio': '$150.00'
     },
     // Se van a agregar 2 asesores más... NO ELIMINAR
-    // { 
+    // {
     //   'name': 'Rosa Pérez',
     //   'img': './src/Rosa.png',
     //   'description': 'HTML5, CSS3',
@@ -125,4 +125,3 @@ let listaAsesores = [
     //   'description': 'Contenido del modal 12'
     // },
   ];
-  

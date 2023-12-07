@@ -10,7 +10,7 @@
     padding: 10px;
     margin: auto;
     display:grid;
-    
+
     /* oculto lo que queda fuera del .contenedor */
     contain: paint;
 }

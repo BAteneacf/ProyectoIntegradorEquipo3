@@ -13,7 +13,7 @@ function modalFormat (info) {
             </div>
             <div class= "modal-body">
             <img id="imagenesAsesores" src="${info.img}" style="heigth:550px; width:250px; display: flex; align-items: center;">
-            <p id="descripcionAsesor">  
+            <p id="descripcionAsesor">
               Habilidad principal: ${info.habilidadesPrincipales} <br/><br/>
               Habilidades adicionales: ${info.habilidadesAdicionales} <br/><br/>
               Horario: ${info.horarios}
